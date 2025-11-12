@@ -79,7 +79,7 @@ void GP2040::setup() {
 
 	// Setup Gamepad
 	gamepad->setup();
-
+  usb_hid.setControllerType(PS4Controller);
 	// Initialize last reinit profile to current so we don't reinit on first loop
 	gamepad->lastReinitProfileNumber = Storage::getInstance().getGamepadOptions().profileNumber;
 
